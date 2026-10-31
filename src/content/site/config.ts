@@ -239,25 +239,6 @@ export const siteConfig = {
   coverageLead:
     "Tegucigalpa, Valle de Ángeles, Santa Lucía y El Chimbo. La fila se mueve sola.",
 
-  photoCredits: [
-    {
-      label: "Tegucigalpa, Eduarg23, CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Tegucigalpa-skyline-2024.jpg",
-    },
-    {
-      label: "Tegucigalpa de noche, Luis Alfredo Romero, CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Tegucigalpa_Skyline_2020s.jpg",
-    },
-    {
-      label: "Valle de Ángeles, Luis Alfredo Romero, CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Casa_Antigua_En_Valle_de_Angeles_Honduras.jpg",
-    },
-    {
-      label: "Santa Lucía, chamo estudio, CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Honduras_Santa_Lucia.jpg",
-    },
-  ],
-
   sisterBrand: {
     enabled: false,
     eyebrow: "",

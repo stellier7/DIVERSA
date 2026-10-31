@@ -128,21 +128,6 @@ export async function SiteFooter() {
           </p>
           <p className="type-meta sm:text-right">Tegucigalpa, Honduras</p>
         </div>
-        <p className="type-meta mt-3 text-center sm:text-left">
-          {siteConfig.photoCredits.map((credit, index) => (
-            <span key={credit.href}>
-              {index > 0 ? " · " : "Fotos: "}
-              <a
-                href={credit.href}
-                className="focus-ring underline decoration-accent/30 underline-offset-4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {credit.label}
-              </a>
-            </span>
-          ))}
-        </p>
       </Container>
     </footer>
   );
