@@ -1,6 +1,6 @@
 # DIVERSA Bienes Raíces
 
-Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog opens with the luxury house in Santa Lucía.
+Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog includes the luxury house in Santa Lucía and an apartment for rent in Cipreses de San Ignacio.
 
 ---
 

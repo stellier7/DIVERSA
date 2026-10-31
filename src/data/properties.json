@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo abre con la casa de lujo en Santa Lucía.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye la casa de lujo en Santa Lucía y un apartamento en Cipreses de San Ignacio.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 1,
+    "total": 2,
     "forSale": 1,
-    "forRent": 0
+    "forRent": 1
   },
   "properties": [
     {
@@ -119,6 +119,65 @@
         "Área social exterior con barra, refrigerador y techo de lámina",
         "Cocina de la barbacoa con tarja y barra de madera",
         "Jardín posterior con pinos y sendero de piedra"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p002",
+      "slug": "apartamento-cipreses-san-ignacio",
+      "url": "/properties/apartamento-cipreses-san-ignacio-p002",
+      "title": "Apartamento en Cipreses de San Ignacio",
+      "description": "Apartamento en alquiler en Cipreses de San Ignacio, Tegucigalpa, cómodo, moderno y con gimnasio.\n\nLa renta es de US$750 al mes y el precio es negociable. Está en Cipreses de San Ignacio, con una ubicación práctica dentro de Tegucigalpa.\n\nCuenta con dos habitaciones, dos baños completos, sala, comedor y cocina, área de lavandería, terraza y dos estacionamientos. Incluye dos aires acondicionados.\n\nEntre las amenidades del condominio están el gimnasio, la sala de cine, las áreas de barbacoa, el salón de eventos y reuniones, y las áreas infantiles.",
+      "listingType": "rent",
+      "propertyType": "Apartamento",
+      "priceLabel": "US$750 / mes, negociable",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "neighborhood": "Cipreses de San Ignacio",
+      "condition": "",
+      "bedrooms": "2",
+      "bathrooms": "2",
+      "garage": "2",
+      "highlights": [
+        "Sala, comedor y cocina",
+        "Área de lavandería",
+        "Terraza",
+        "Dos aires acondicionados incluidos",
+        "Precio negociable"
+      ],
+      "amenities": [
+        "Gimnasio",
+        "Sala de cine",
+        "Áreas de barbacoa",
+        "Salón de eventos y reuniones",
+        "Áreas infantiles"
+      ],
+      "code": "DV-TG-002",
+      "coverImage": "/images/properties/apartamento-cipreses/01.jpg",
+      "images": [
+        "/images/properties/apartamento-cipreses/01.jpg",
+        "/images/properties/apartamento-cipreses/02.jpg",
+        "/images/properties/apartamento-cipreses/03.jpg",
+        "/images/properties/apartamento-cipreses/04.jpg",
+        "/images/properties/apartamento-cipreses/05.jpg",
+        "/images/properties/apartamento-cipreses/06.jpg",
+        "/images/properties/apartamento-cipreses/07.jpg",
+        "/images/properties/apartamento-cipreses/08.jpg",
+        "/images/properties/apartamento-cipreses/09.jpg",
+        "/images/properties/apartamento-cipreses/10.jpg"
+      ],
+      "imageAlts": [
+        "Torres, jardines y acceso del condominio en Cipreses de San Ignacio",
+        "Gimnasio del condominio",
+        "Cocina con muebles de madera y top claro",
+        "Sala con puerta de vidrio hacia la terraza",
+        "Sala, comedor y cocina del apartamento",
+        "Habitación con aire acondicionado y ventana",
+        "Habitación con clóset",
+        "Habitación con ventana y aire acondicionado",
+        "Área de lavandería",
+        "Baño completo con ducha"
       ],
       "attributes": {}
     }

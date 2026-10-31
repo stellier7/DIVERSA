@@ -35,6 +35,8 @@ export type AltairRawProperty = {
   country: string;
   region: string;
   city: string;
+  /** Neighborhood or project name, shown ahead of the city. */
+  neighborhood?: string | null;
   condition: string;
   bedrooms?: string | null;
   bathrooms?: string | null;
@@ -43,6 +45,7 @@ export type AltairRawProperty = {
   /** Lot size already labeled, when it must not be shown as m². */
   lotSizeLabel?: string | null;
   highlights?: string[];
+  amenities?: string[];
   /** Parallel to `images`. Falls back to the title. */
   imageAlts?: string[];
   code: string;
@@ -142,7 +145,10 @@ export function mapAltairProperty(
         ? "alquiler"
         : "listado";
 
-  const locationLabel = [raw.city, raw.region, raw.country].filter(Boolean).join(", ");
+  const locationLabel = [raw.neighborhood, raw.city, raw.region, raw.country]
+    .map((part) => part?.trim())
+    .filter(Boolean)
+    .join(", ");
 
   const bedrooms = parseNumber(raw.bedrooms);
   const bathrooms = parseNumber(raw.bathrooms);
@@ -170,6 +176,7 @@ export function mapAltairProperty(
     ...highlights,
     ...(condition ? [`Estado: ${condition}`] : []),
   ];
+  const amenities = (raw.amenities ?? []).map((item) => item.trim()).filter(Boolean);
 
   return {
     id: raw.id,
@@ -207,6 +214,7 @@ export function mapAltairProperty(
     },
     residential,
     features: features.length > 0 ? features : undefined,
+    amenities: amenities.length > 0 ? amenities : undefined,
     seo: {
       title: raw.title.trim(),
       description: shortDescription(raw.description),

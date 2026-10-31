@@ -28,6 +28,7 @@ function propertySearchText(property: Property): string {
       property.location.address,
       property.tags?.join(" "),
       property.features?.join(" "),
+      property.amenities?.join(" "),
       formatPropertyType(property.propertyType),
       property.propertyType,
       listingAliases.join(" "),

@@ -68,7 +68,10 @@ export const siteConfig = {
     { label: "ES", href: "/" },
   ],
 
-  homeFeaturedPropertySlugs: ["casa-lujo-santa-lucia-p001"],
+  homeFeaturedPropertySlugs: [
+    "casa-lujo-santa-lucia-p001",
+    "apartamento-cipreses-san-ignacio-p002",
+  ],
 
   social: {
     instagram: "https://www.instagram.com/diversa.br.hn/",
