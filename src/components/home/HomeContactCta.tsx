@@ -18,7 +18,7 @@ export function HomeContactCta() {
           Atención directa para compraventa y asesoría.{" "}
           {waReady
             ? "Escríbanos por WhatsApp."
-            : "El número de WhatsApp de Palermo está pendiente — use el formulario de contacto."}
+            : "Escríbanos desde la página de contacto."}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button

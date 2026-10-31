@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { siteConfig } from "@/content/site/config";
 import { buildWhatsAppUrl } from "@/lib/contact/whatsapp";
 import { Container } from "./Container";
@@ -6,10 +7,15 @@ import { Container } from "./Container";
 const phoneHref = (display: string) =>
   `tel:+${display.replace(/\D/g, "").replace(/^0+/, "")}`;
 
-export function SiteFooter() {
+export async function SiteFooter() {
   const year = new Date().getFullYear();
   const whatsappUrl = buildWhatsAppUrl();
+  const secondaryUrl = buildWhatsAppUrl(undefined, siteConfig.whatsappSecondary.e164);
   const office = siteConfig.offices[0];
+  const headerList = await headers();
+  const pathname = headerList.get("x-pathname") ?? "/";
+  const english = pathname === "/en" || pathname.startsWith("/en/");
+  const nav = english ? siteConfig.navEn : siteConfig.nav;
 
   return (
     <footer className="border-t border-line bg-surface" aria-label="Pie de página">
@@ -25,10 +31,24 @@ export function SiteFooter() {
               WhatsApp · {siteConfig.whatsapp.display}
             </a>
             <a
+              className="focus-ring inline-flex items-center py-0.5 font-medium text-accent transition-colors hover:text-accent-hover"
+              href={secondaryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp · {siteConfig.whatsappSecondary.display}
+            </a>
+            <a
               className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
               href={phoneHref(siteConfig.phone)}
             >
               Tel. {siteConfig.phone}
+            </a>
+            <a
+              className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
+              href={`mailto:${siteConfig.contactEmail}`}
+            >
+              {siteConfig.contactEmail}
             </a>
             {siteConfig.social?.instagram ? (
               <a
@@ -38,6 +58,16 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
               >
                 {siteConfig.social.instagramHandle}
+              </a>
+            ) : null}
+            {siteConfig.social.facebook ? (
+              <a
+                className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteConfig.social.facebookHandle}
               </a>
             ) : null}
           </p>
@@ -51,7 +81,7 @@ export function SiteFooter() {
         </div>
         <nav aria-label="Navegación del pie" className="md:text-right">
           <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm md:justify-end">
-            {siteConfig.nav.map((item) => (
+            {nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -83,7 +113,7 @@ export function SiteFooter() {
       <Container className="border-t border-line py-4">
         <div className="grid gap-2 text-center sm:grid-cols-3 sm:items-center sm:gap-3">
           <p className="type-meta sm:text-left">
-            © {year} {siteConfig.name}.
+            © {year} {siteConfig.legalName}.
           </p>
           <p className="type-meta sm:text-center">
             Diseñado por{" "}
@@ -98,6 +128,21 @@ export function SiteFooter() {
           </p>
           <p className="type-meta sm:text-right">Tegucigalpa, Honduras</p>
         </div>
+        <p className="type-meta mt-3 text-center sm:text-left">
+          {siteConfig.photoCredits.map((credit, index) => (
+            <span key={credit.href}>
+              {index > 0 ? " · " : "Fotos: "}
+              <a
+                href={credit.href}
+                className="focus-ring underline decoration-accent/30 underline-offset-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {credit.label}
+              </a>
+            </span>
+          ))}
+        </p>
       </Container>
     </footer>
   );

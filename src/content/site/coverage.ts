@@ -3,32 +3,45 @@ export type CoverageCity = {
   slug: string;
   matchNames: string[];
   featured: boolean;
+  image?: { src: string; alt: string };
 };
 
-/** Service areas — expand when the owner confirms coverage. */
+/** Service areas. El Chimbo has no photograph yet, so the card uses the brand panel. */
 export const coverageCities: CoverageCity[] = [
   {
     label: "Tegucigalpa",
     slug: "tegucigalpa",
     matchNames: ["Tegucigalpa"],
     featured: true,
+    image: {
+      src: "/images/site/zones/tegucigalpa.jpg",
+      alt: "Centro de Tegucigalpa desde una ladera",
+    },
   },
   {
-    label: "Siguatepeque",
-    slug: "siguatepeque",
-    matchNames: ["Siguatepeque"],
+    label: "Valle de Ángeles",
+    slug: "valle-de-angeles",
+    matchNames: ["Valle de Ángeles", "Valle de Angeles"],
     featured: true,
-  },
-  {
-    label: "Cortés",
-    slug: "cortes",
-    matchNames: ["Cortés", "Cortes", "San Pedro Sula"],
-    featured: true,
+    image: {
+      src: "/images/site/zones/valle-de-angeles.jpg",
+      alt: "Casa de teja en Valle de Ángeles",
+    },
   },
   {
     label: "Santa Lucía",
     slug: "santa-lucia",
     matchNames: ["Santa Lucía", "Santa Lucia"],
+    featured: true,
+    image: {
+      src: "/images/site/zones/santa-lucia.jpg",
+      alt: "Santa Lucía entre pinos y techos de teja",
+    },
+  },
+  {
+    label: "El Chimbo",
+    slug: "el-chimbo",
+    matchNames: ["El Chimbo", "Chimbo"],
     featured: true,
   },
 ];
@@ -43,23 +56,19 @@ export const homeServiceLinks = [
     href: "/properties?listing=rent",
   },
   {
-    label: "Casas",
-    href: "/properties?type=house",
+    label: "Avalúos",
+    href: "/services#avaluos",
   },
   {
-    label: "Apartamentos",
-    href: "/properties?type=apartment",
+    label: "Administración",
+    href: "/services#administracion",
   },
   {
-    label: "Bodegas",
-    href: "/properties?type=industrial",
+    label: "Construcción y remodelación",
+    href: "/proceso",
   },
   {
-    label: "Oficinas / consultorios",
-    href: "/properties?type=office",
-  },
-  {
-    label: "Hablar por WhatsApp",
+    label: "Asesoría gratuita",
     href: "/contact",
   },
 ] as const;

@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/content/site/config";
 import { useScrollLinkedHeader } from "@/lib/layout/useScrollLinkedHeader";
+import { useSiteNav } from "@/lib/layout/useSiteNav";
 import { Container } from "./Container";
 import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
   const headerRef = useScrollLinkedHeader();
+  const { homeHref, items } = useSiteNav();
 
   return (
     <header ref={headerRef} className="site-header">
@@ -20,25 +22,19 @@ export function SiteHeader() {
         </a>
         <Container className="flex h-full items-center gap-2.5 sm:gap-3">
           <Link
-            href="/"
-            className="focus-ring group flex shrink-0 items-center gap-2.5 sm:gap-3"
-            aria-label={siteConfig.name}
+            href={homeHref}
+            className="focus-ring group flex shrink-0 items-center"
+            aria-label={siteConfig.legalName}
           >
-            <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[color:var(--accent)] shadow-[var(--shadow-soft)] ring-1 ring-[color-mix(in_srgb,var(--brand-gold)_50%,transparent)] transition-[box-shadow,ring-color] duration-200 group-hover:shadow-[var(--shadow-card)] sm:h-12 sm:w-12">
-              <Image
-                src={siteConfig.logo}
-                alt=""
-                width={320}
-                height={320}
-                className="h-full w-full scale-[1.02] object-cover"
-                priority
-                sizes="48px"
-                unoptimized
-              />
-            </span>
-            <span className="font-display text-[1.25rem] leading-none tracking-tight text-accent sm:text-[1.4rem]">
-              Palermo <span className="text-[color:var(--brand-gold)]">Home</span>
-            </span>
+            <Image
+              src={siteConfig.logo}
+              alt=""
+              width={952}
+              height={664}
+              className="h-14 w-auto sm:h-16"
+              priority
+              unoptimized
+            />
           </Link>
 
           <div className="ml-auto flex items-center gap-2 sm:gap-3">
@@ -46,7 +42,7 @@ export function SiteHeader() {
               className="hidden items-center gap-1 text-sm lg:flex xl:gap-2"
               aria-label="Principal"
             >
-              {siteConfig.nav.map((item) => (
+              {items.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

@@ -5,6 +5,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { PropertyListingImage } from "@/components/media/PropertyListingImage";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Section } from "@/components/layout/Section";
+import { siteConfig } from "@/content/site/config";
 import type { CoverageCityCard } from "@/lib/properties/coverage-media";
 
 type HomeCoverageProps = {
@@ -85,8 +86,7 @@ export function HomeCoverage({ featured, secondary }: HomeCoverageProps) {
         <p className="type-meta-caps text-accent">Cobertura</p>
         <h2 className="type-display-section mt-3 text-accent">Zonas de atención</h2>
         <p className="prose-editorial mt-4">
-          Presencia en Tegucigalpa, Siguatepeque, Cortés y Santa Lucía. Explore el portafolio por
-          zona.
+          {siteConfig.coverageLead}
         </p>
       </RevealOnScroll>
 

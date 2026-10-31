@@ -16,7 +16,7 @@ export default async function AdminLayout({
       <header className="border-b border-line bg-background/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <div>
-            <p className="type-meta-caps text-accent">Palermo</p>
+            <p className="type-meta-caps text-accent">DIVERSA</p>
             <Link href="/admin" className="font-display text-2xl text-foreground">
               Panel de administración
             </Link>

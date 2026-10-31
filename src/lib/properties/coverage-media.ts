@@ -2,7 +2,7 @@ import { coverageCities, cityMatchesCoverage } from "@/content/site/coverage";
 import type { CoverageCity } from "@/content/site/coverage";
 import type { Property } from "./types";
 
-export type CoverageCityCard = CoverageCity & {
+export type CoverageCityCard = Omit<CoverageCity, "image"> & {
   href: string;
   image: { src: string; alt: string } | null;
   listingCount: number;
@@ -31,7 +31,7 @@ export function buildCoverageCityCards(properties: Property[]): {
     return {
       ...city,
       href: `/properties?city=${encodeURIComponent(city.slug)}`,
-      image: pickHeroImage(matches),
+      image: pickHeroImage(matches) ?? city.image ?? null,
       listingCount: matches.length,
     };
   });

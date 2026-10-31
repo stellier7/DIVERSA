@@ -36,9 +36,9 @@ function resolveOgImage(image?: string | OgImageInput): ResolvedOgImage[] {
     return [
       {
         url: absoluteAssetUrl(siteConfig.defaultOgImage),
-        width: 320,
-        height: 320,
-        alt: siteConfig.name,
+        width: 1600,
+        height: 900,
+        alt: siteConfig.heroImageAlt,
       },
     ];
   }
@@ -63,28 +63,39 @@ export function buildSiteMetadata(overrides?: {
   path?: string;
   image?: string | OgImageInput;
   noIndex?: boolean;
+  locale?: "es_HN" | "en_US";
 }): Metadata {
   const title = overrides?.title
-    ? `${overrides.title} · ${siteConfig.name}`
-    : `${siteConfig.name} · ${siteConfig.tagline}`;
+    ? `${overrides.title} · ${siteConfig.legalName}`
+    : siteConfig.legalName;
   const description = overrides?.description ?? siteConfig.description;
   const path = overrides?.path ?? "/";
-  const images = resolveOgImage(overrides?.image);
+  const images = resolveOgImage(overrides?.image ?? siteConfig.defaultOgImage);
   const imageUrls = images.map((entry) => entry.url);
-  const shareCard = overrides?.image ? "summary_large_image" : "summary";
+  const shareCard = "summary_large_image";
+  const locale = overrides?.locale ?? "es_HN";
+  const languages =
+    path === "/" || path === "/en"
+      ? {
+          "es-HN": absoluteUrl("/"),
+          en: absoluteUrl("/en"),
+        }
+      : undefined;
 
   return {
     title,
     description,
     metadataBase: new URL(baseUrl),
-    alternates: { canonical: absoluteUrl(path) },
-    // Favicon, icon, and apple icon are the Palermo logo via app/ file conventions.
+    alternates: {
+      canonical: absoluteUrl(path),
+      ...(languages ? { languages } : {}),
+    },
     openGraph: {
       title,
       description,
       url: absoluteUrl(path),
-      siteName: siteConfig.name,
-      locale: "es_HN",
+      siteName: siteConfig.legalName,
+      locale,
       type: "website",
       images,
     },

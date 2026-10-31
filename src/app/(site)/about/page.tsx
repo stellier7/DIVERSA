@@ -6,8 +6,7 @@ import { buildSiteMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildSiteMetadata({
   title: "Nosotros",
-  description:
-    "Palermo Home — inmobiliaria con portafolio exclusivo de alto nivel en Honduras. Renta y venta.",
+  description: siteConfig.description,
   path: "/about",
 });
 
@@ -58,9 +57,13 @@ export default function AboutPage() {
       <Section className="bg-surface">
         <p className="type-meta-caps text-accent">English</p>
         <h2 className="mt-3 font-display text-3xl text-accent sm:text-4xl">
-          {about.englishHeadline}
+          This page in English
         </h2>
-        <p className="prose-editorial mt-6 max-w-2xl">{about.englishBody}</p>
+        <p className="prose-editorial mt-6 max-w-2xl">
+          <a className="focus-ring underline decoration-accent/40 underline-offset-4" href="/en">
+            Read the English overview of DIVERSA Bienes Raíces.
+          </a>
+        </p>
       </Section>
     </>
   );

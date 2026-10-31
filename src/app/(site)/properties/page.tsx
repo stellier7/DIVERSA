@@ -17,7 +17,7 @@ import { buildSiteMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildSiteMetadata({
   title: "Propiedades",
   description:
-    "Catálogo demo de Palermo — casas, apartamentos y terrenos en Tegucigalpa y Honduras.",
+    "Catálogo de DIVERSA Bienes Raíces en Tegucigalpa, Valle de Ángeles, Santa Lucía y El Chimbo.",
   path: "/properties",
 });
 
@@ -64,8 +64,9 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
         <RevealOnScroll>
           <h1 className="font-display text-5xl sm:text-6xl">Propiedades</h1>
           <p className="prose-editorial mt-6 max-w-2xl">
-            {stats.total} fichas de demostración ({stats.forSale} en venta). Reemplazar con el
-            inventario real de Palermo. Cada ficha incluye fotos, descripción y contacto.
+            {stats.total === 0
+              ? "El portafolio se está armando. Escríbanos por WhatsApp y le contamos lo que hay en su zona."
+              : `${stats.total} propiedades (${stats.forSale} en venta, ${stats.forRent} en renta).`}
           </p>
         </RevealOnScroll>
         <DirectoryFilters
@@ -85,10 +86,16 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
         </a>
         {pagination.totalItems === 0 ? (
           <div className="max-w-xl rounded-[var(--radius-lg)] border border-line/80 bg-surface/60 px-6 py-8">
-            <h2 className="font-display text-2xl">{propertyCopy.catalogEmptyTitle}</h2>
-            <p className="prose-editorial mt-3 text-muted">{propertyCopy.catalogEmptyBody}</p>
-            <Button href="/properties" variant="outline" className="mt-6">
-              {propertyCopy.catalogViewAll}
+            <h2 className="font-display text-2xl">
+              {stats.total === 0 ? "Catálogo en preparación" : propertyCopy.catalogEmptyTitle}
+            </h2>
+            <p className="prose-editorial mt-3 text-muted">
+              {stats.total === 0
+                ? "Cuando lleguen las fichas, aparecen aquí con foto, zona y precio. Mientras tanto, la asesoría es gratuita."
+                : propertyCopy.catalogEmptyBody}
+            </p>
+            <Button href={stats.total === 0 ? "/contact" : "/properties"} variant="outline" className="mt-6">
+              {stats.total === 0 ? "Escribir por WhatsApp" : propertyCopy.catalogViewAll}
             </Button>
           </div>
         ) : (

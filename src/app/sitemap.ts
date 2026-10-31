@@ -3,7 +3,7 @@ import { getAllProperties } from "@/lib/properties/service";
 import { absoluteUrl } from "@/lib/seo/metadata";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ["", "/properties", "/about", "/services", "/contact"].map(
+  const staticRoutes = ["", "/properties", "/about", "/services", "/proceso", "/preguntas", "/contact", "/en"].map(
     (path) => ({
       url: absoluteUrl(path || "/"),
       lastModified: new Date(),

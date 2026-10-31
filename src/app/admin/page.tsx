@@ -29,7 +29,7 @@ export default async function AdminHomePage() {
       <div>
         <h1 className="font-display text-4xl text-accent">Hola{profile.fullName ? `, ${profile.fullName}` : ""}</h1>
         <p className="prose-editorial mt-3 max-w-2xl">
-          Gestione el catálogo de Palermo: alta, edición, estado, destacados y
+          Gestione el catálogo de DIVERSA: alta, edición, estado, destacados y
           respaldos. El sitio público sigue leyendo JSON hasta que active{" "}
           <code className="text-sm">PROPERTIES_DATA_SOURCE=supabase</code>.
         </p>

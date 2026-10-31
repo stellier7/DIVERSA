@@ -6,7 +6,8 @@ import { buildSiteMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildSiteMetadata({
   title: "Servicios",
-  description: "Servicios inmobiliarios de Palermo — compraventa y asesoría (demo).",
+  description:
+    "Venta, alquiler, avalúos con ingenieros certificados, administración, construcción y remodelaciones. Asesoría inicial gratuita.",
   path: "/services",
 });
 
@@ -19,14 +20,18 @@ export default function ServicesPage() {
       <Section>
         <h1 className="font-display text-5xl sm:text-6xl">Servicios</h1>
         <p className="prose-editorial mt-6 max-w-2xl">
-          Palermo se enfoca en bienes raíces de compraventa y corretaje — no en rentas de corta
-          estadía. Los textos siguientes son marcadores hasta confirmar el alcance con el dueño.
+          Comercialización, avalúos, administración y obra. La primera asesoría no tiene costo.
+          El paso a paso está en{" "}
+          <a className="underline decoration-accent/40 underline-offset-4" href="/proceso">
+            Proceso
+          </a>
+          .
         </p>
       </Section>
       <Section className="bg-surface">
         <div className="grid gap-12 lg:grid-cols-2">
           {siteConfig.services.map((service) => (
-            <article key={service.title} className="border-t border-line pt-6">
+            <article key={service.id} id={service.id} className="border-t border-line pt-6">
               <h2 className="font-display text-3xl">{service.title}</h2>
               <p className="prose-editorial mt-4">{service.body}</p>
             </article>

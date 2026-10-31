@@ -11,7 +11,7 @@ export function HomeServicesLinks() {
           <p className="home-services-kicker">Oferta</p>
           <h2 className="type-display-section mt-3 text-accent">Servicios</h2>
           <p className="prose-editorial mt-5">
-            Filtre el catálogo por tipo de operación o consulte asesoría directa.
+            Venta, alquiler, avalúos, administración y obra. La asesoría inicial es gratuita.
           </p>
         </RevealOnScroll>
         <RevealOnScroll className="home-services-actions" delayMs={100}>

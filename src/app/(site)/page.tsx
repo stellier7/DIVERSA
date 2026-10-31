@@ -88,20 +88,24 @@ export default async function HomePage() {
             <p className="type-meta-caps text-accent">Selección</p>
             <h2 className="type-display-section mt-3 text-accent">Propiedades destacadas</h2>
             <p className="prose-editorial mt-4 max-w-xl">
-              Selección actual del portafolio. Consultá por WhatsApp para visitas y detalle.
+              {featured.length > 0
+                ? "Selección actual del portafolio. Consulte por WhatsApp para visitas y detalle."
+                : "El catálogo se publica con las propiedades que nos comparta. La asesoría por WhatsApp ya está disponible."}
             </p>
           </div>
           <Button href="/properties" variant="primary">
             Ver todas
           </Button>
         </RevealOnScroll>
-        <div className="grid gap-8 lg:gap-10">
-          {featured.map((property, index) => (
-            <RevealOnScroll key={property.id} delayMs={index * 80}>
-              <PropertyCard property={property} priority={index === 0} />
-            </RevealOnScroll>
-          ))}
-        </div>
+        {featured.length > 0 ? (
+          <div className="grid gap-8 lg:gap-10">
+            {featured.map((property, index) => (
+              <RevealOnScroll key={property.id} delayMs={index * 80}>
+                <PropertyCard property={property} priority={index === 0} />
+              </RevealOnScroll>
+            ))}
+          </div>
+        ) : null}
       </Section>
 
       <HomeGallery />

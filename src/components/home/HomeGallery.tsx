@@ -38,7 +38,7 @@ export function HomeGallery() {
         <p className="type-meta-caps text-accent">Galería</p>
         <h2 className="type-display-section mt-3 text-accent">Ambientes</h2>
         <p className="prose-editorial mt-4">
-          Una muestra del portafolio actual de Palermo Home.
+          {siteConfig.galleryLead}
         </p>
       </RevealOnScroll>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">

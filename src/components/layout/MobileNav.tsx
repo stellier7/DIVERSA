@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/content/site/config";
+import { useSiteNav } from "@/lib/layout/useSiteNav";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const { items } = useSiteNav();
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export function MobileNav() {
           aria-label="Navegación móvil"
         >
           <ul className="flex flex-col gap-1">
-            {siteConfig.nav.map((item) => (
+            {items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}

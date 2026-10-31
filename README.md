@@ -1,6 +1,6 @@
 # DIVERSA Bienes Raíces
 
-This repository starts as a copy of the Palermo Home demo (`stellier7/palermohomehn`) so the DIVERSA pitch can reuse the same real-estate site. Visible copy, listings, and colors still belong to Palermo until the DIVERSA brand content is loaded. The supplied logo is at `public/images/site/logo-diversa.jpg`.
+Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The property catalog is empty until the listings arrive.
 
 ---
 

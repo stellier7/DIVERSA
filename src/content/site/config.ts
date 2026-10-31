@@ -1,159 +1,357 @@
 /**
- * PALERMO HOME — single editable CONFIG
- * Swap name, colors (globals.css), copy, listings (properties.json),
- * images under /public/images, and contact fields here.
- *
- * Placeholders are marked clearly. Do not invent real prices or listings.
+ * DIVERSA Bienes Raíces — single editable CONFIG.
+ * Listings live in src/data/properties.json and are still empty on purpose.
  */
 
 export const siteConfig = {
-  name: "Palermo Home",
-  legalName: "Palermo Home",
-  heroImage: "/images/site/hero-poster.jpg",
-  /**
-   * Silent homepage loop. The file itself plays forward, then back, a little
-   * slower than real time, so the loop does not cut to the first frame.
-   * Leave empty to keep the still.
-   */
-  heroVideo: "/hero.mp4",
-  /** From Instagram @palermohomehn */
-  tagline: "Inmobiliaria con portafolio exclusivo de alto nivel en Honduras",
-  /** One short supporting sentence under the brand (Spanish). */
-  heroSupporting: "Renta y venta de propiedades",
+  name: "DIVERSA",
+  legalName: "DIVERSA Bienes Raíces",
+  heroImage: "/images/site/hero.jpg",
+  heroImageAlt: "Tegucigalpa desde una ladera, con el centro y las montañas al fondo",
+  /** Leave empty to keep the still. Palermo's film is not used. */
+  heroVideo: "",
+  tagline:
+    "Somos una agencia de bienes raíces, expertos en comercialización, desarrollo y administración de bienes inmuebles.",
+  heroSupporting: "Brindamos asesoría gratuita.",
+  heroAboutLabel: "Conocer DIVERSA",
   heroLead:
-    "Portafolio selecto para quienes buscan residencias y activos de alto nivel, con asesoría clara y discreta en Honduras.",
+    "Venta, alquiler, avalúos, administración, construcción y remodelaciones en Tegucigalpa, Valle de Ángeles, Santa Lucía y El Chimbo.",
   description:
-    "Palermo Home — inmobiliaria con portafolio exclusivo de alto nivel en Honduras. Renta y venta de propiedades.",
+    "DIVERSA Bienes Raíces, agencia en Tegucigalpa. Comercialización, desarrollo y administración de inmuebles, con asesoría gratuita.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
-  defaultOgImage: "/images/site/logo-palermo-home.png",
-  logo: "/images/site/logo-palermo-home.png",
-  logoFull: "/images/site/logo-palermo-home.png",
+  defaultOgImage: "/images/site/hero.jpg",
+  logo: "/images/site/logo-diversa.png",
+  logoFull: "/images/site/logo-diversa.png",
 
-  /** No public email — WhatsApp first. */
-  contactEmail: "",
-  phone: "+504 8819-5809",
-  mobile: "+504 8819-5809",
+  contactEmail: "diversa.br.hn@gmail.com",
+  phone: "+504 9686-6312",
+  mobile: "+504 9686-6312",
   whatsapp: {
-    display: "+504 8819-5809",
-    e164: "50488195809",
+    display: "+504 9686-6312",
+    e164: "50496866312",
     defaultMessage:
-      "Hola, vi el sitio de Palermo Home y me gustaría recibir información sobre sus propiedades.",
+      "Hola, vi el sitio de DIVERSA Bienes Raíces y me gustaría recibir información.",
     ready: true,
+  },
+  whatsappSecondary: {
+    display: "+504 9690-5149",
+    e164: "50496905149",
   },
   offices: [
     {
       city: "Tegucigalpa",
-      address: "Tegucigalpa, Honduras · atención por cita",
-      phone: "+504 8819-5809",
-      mapEmbedUrl: "",
-      mapLink: "https://maps.google.com/?q=Tegucigalpa,+Honduras",
+      address: "Centro de Negocios Hotel Clarion, Tegucigalpa, Honduras",
+      phone: "+504 9686-6312",
+      mapEmbedUrl:
+        "https://maps.google.com/maps?q=Centro%20de%20Negocios%20Hotel%20Clarion%20Tegucigalpa&z=16&output=embed",
+      mapLink: "https://maps.app.goo.gl/FoPrg3VFM91RiNH97",
     },
   ],
 
   nav: [
     { label: "Propiedades", href: "/properties" },
-    { label: "Nosotros", href: "/about" },
     { label: "Servicios", href: "/services" },
+    { label: "Nosotros", href: "/about" },
+    { label: "Proceso", href: "/proceso" },
+    { label: "Preguntas", href: "/preguntas" },
     { label: "Contacto", href: "/contact" },
+    { label: "EN", href: "/en" },
+  ],
+  navEn: [
+    { label: "Services", href: "/en#services" },
+    { label: "About", href: "/en#about" },
+    { label: "Process", href: "/en#process" },
+    { label: "FAQ", href: "/en#faq" },
+    { label: "Contact", href: "/en#contact" },
+    { label: "ES", href: "/" },
   ],
 
-  homeFeaturedPropertySlugs: [
-    "apartamento-venta-torre-cipreses-san-ignacio-p001",
-    "bodega-venta-siguatepeque-ca5-p002",
-    "casa-venta-hacienda-real-cortes-p003",
-    "apartamento-alquiler-torre-nivo-las-lomas-p004",
-    "consultorio-alquiler-clinica-amueblada-p005",
-    "casa-venta-santa-lucia-p006",
-  ],
+  homeFeaturedPropertySlugs: [] as string[],
 
   social: {
-    instagram: "https://instagram.com/palermohomehn",
-    instagramHandle: "@palermohomehn",
+    instagram: "https://www.instagram.com/diversa.br.hn/",
+    instagramHandle: "@diversa.br.hn",
+    facebook: "https://www.facebook.com/Diversa.Inmobiliaria/",
+    facebookHandle: "Facebook",
   },
 
   services: [
     {
-      title: "Venta de propiedades",
-      body: "Residencias y activos de alto nivel en Honduras — portafolio exclusivo para compradores e inversionistas.",
+      id: "venta",
+      title: "Venta de inmuebles",
+      body: "Comercializamos casas, apartamentos, terrenos y activos comerciales. La primera asesoría no tiene costo.",
     },
     {
-      title: "Renta de propiedades",
-      body: "Alquileres residenciales de largo plazo. Distinto de AirHome HN (estadías cortas amuebladas).",
+      id: "alquiler",
+      title: "Alquileres",
+      body: "Buscamos y colocamos inmuebles en renta, con seguimiento claro para propietarios e inquilinos.",
     },
     {
-      title: "Portafolio exclusivo",
-      body: "Seleccionamos y presentamos propiedades con criterio: ubicación, acabados y potencial de valor, sin saturar el catálogo.",
+      id: "avaluos",
+      title: "Avalúos",
+      body: "Avalúos con ingenieros certificados, para compra, venta, crédito o una decisión de inversión.",
     },
     {
-      title: "Asesoría y corretaje",
-      body: "Acompañamiento en visitas privadas, negociación y documentación, con comunicación directa por WhatsApp.",
+      id: "administracion",
+      title: "Administración de propiedades",
+      body: "Cuidamos inmuebles de terceros: renta, mantenimiento y la relación con quien los ocupa.",
+    },
+    {
+      id: "construccion",
+      title: "Construcción",
+      body: "Acompañamos obra nueva, desde la idea y el terreno hasta la entrega del inmueble.",
+    },
+    {
+      id: "remodelaciones",
+      title: "Remodelaciones",
+      body: "Renovamos espacios para habitarlos, alquilarlos o venderlos con mejor presentación.",
+    },
+  ],
+
+  process: [
+    {
+      title: "Asesoría gratuita",
+      body: "Cuéntenos qué busca o qué quiere hacer con su inmueble. La primera conversación no tiene costo y sirve para ordenar zona, presupuesto y siguientes pasos.",
+    },
+    {
+      title: "Comercialización",
+      body: "Preparamos la salida al mercado, las visitas y la negociación, tanto en venta como en alquiler.",
+    },
+    {
+      title: "Avalúo",
+      body: "Cuando hace falta un valor de referencia, coordinamos el avalúo con ingenieros certificados.",
+    },
+    {
+      title: "Administración",
+      body: "Si el inmueble se queda en renta, podemos administrarlo: cobro, mantenimiento y reporte al propietario.",
+    },
+    {
+      title: "Construcción y remodelación",
+      body: "Para obra nueva o una renovación, armamos el alcance y damos seguimiento hasta dejar el espacio listo.",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "¿La asesoría tiene costo?",
+      answer:
+        "No. La asesoría inicial es gratuita. Le decimos con claridad si un avalúo, una administración o una obra tienen un costo aparte.",
+    },
+    {
+      question: "¿En qué zonas trabajan?",
+      answer:
+        "Sobre todo en Tegucigalpa, y también en Valle de Ángeles, Santa Lucía y El Chimbo. El mapa de zonas se puede afinar cuando tengamos más inventario.",
+    },
+    {
+      question: "¿Hacen avalúos?",
+      answer:
+        "Sí. Los avalúos se hacen con ingenieros certificados, para compra, venta o crédito.",
+    },
+    {
+      question: "¿Pueden administrar una propiedad que ya tengo?",
+      answer:
+        "Sí. La administración cubre la renta, el mantenimiento y la comunicación con el propietario.",
+    },
+    {
+      question: "¿También construyen y remodelan?",
+      answer:
+        "Sí. Además de vender y alquilar, acompañamos construcción y remodelaciones.",
+    },
+    {
+      question: "¿Cómo pido una visita o una cotización?",
+      answer:
+        "Por WhatsApp al +504 9686-6312 o al +504 9690-5149, o por correo a diversa.br.hn@gmail.com. La oficina está en el Centro de Negocios del Hotel Clarion.",
     },
   ],
 
   about: {
     eyebrow: "Nosotros",
-    headline: "Portafolio exclusivo de alto nivel",
-    portrait: "/images/site/about-portrait.jpg",
-    portraitAlt: "Palermo Home",
+    headline: "Comercialización, desarrollo y administración",
+    portrait: "/images/site/about.jpg",
+    portraitAlt: "Casa de adobe y teja en Valle de Ángeles",
     paragraphs: [
-      "Palermo Home es una inmobiliaria con portafolio exclusivo de alto nivel en Honduras. Renta y venta de propiedades para quienes buscan residencias y activos con criterio.",
-      "Trabajamos con un catálogo selecto —apartamentos, casas, espacios comerciales e industriales— y acompañamos cada consulta con atención directa y discreta. Agenda tu visita privada por WhatsApp.",
-      "Misma familia detrás de AirHome HN (estadías cortas amuebladas): Palermo Home se enfoca en compraventa y renta de largo plazo.",
+      "DIVERSA Bienes Raíces es una agencia en Tegucigalpa. Comercializamos, desarrollamos y administramos bienes inmuebles, y la asesoría inicial es gratuita.",
+      "Vendemos y alquilamos, coordinamos avalúos con ingenieros certificados y acompañamos construcción y remodelaciones. La oficina está en el Centro de Negocios del Hotel Clarion.",
+      "Trabajamos sobre todo en Tegucigalpa, y también en Valle de Ángeles, Santa Lucía y El Chimbo.",
     ],
-    englishHeadline: "About Palermo Home",
-    englishBody:
-      "Palermo Home is a Honduras real-estate firm with an exclusive high-level portfolio — rentals and sales. Separate from AirHome HN short-term furnished stays. Private visits by WhatsApp.",
     trustPoints: [
-      { label: "Enfoque", value: "Renta y venta" },
-      { label: "Cobertura", value: "Tegucigalpa · Siguatepeque · Cortés" },
-      { label: "Idiomas", value: "Español · English" },
+      { label: "Asesoría", value: "Gratuita" },
+      { label: "Cobertura", value: "Tegucigalpa y alrededores" },
+      { label: "Oficina", value: "Hotel Clarion" },
     ],
   },
 
+  testimonialsLead:
+    "Borradores de presentación. Los sustituimos por testimonios reales en cuanto nos los compartan.",
   testimonials: [
     {
       quote:
-        "Nos acompañaron de punta a punta con la compra. Claros, puntuales y con un ojo fino para lo que realmente valía la pena visitar.",
+        "Nos explicaron la compra sin apuro y sin cobrarnos la primera asesoría. Las visitas fueron puntuales y el papeleo, ordenado.",
       author: "Familia M.",
       role: "Compradores · Tegucigalpa",
     },
     {
       quote:
-        "Conseguimos un apartamento en renta que encajó perfecto con lo que buscábamos. Respuestas rápidas por WhatsApp y visitas bien organizadas.",
-      author: "A. Rivas",
-      role: "Inquilino · Tegucigalpa",
+        "Dejamos un apartamento en administración y el reporte mensual llega claro: renta, mantenimiento y lo que hay que decidir.",
+      author: "Propietario",
+      role: "Administración · Santa Lucía",
+    },
+    {
+      quote:
+        "Pedimos un avalúo antes de cerrar. El ingeniero fue certificado y el informe llegó a tiempo para la negociación.",
+      author: "Inversionista",
+      role: "Avalúo · Tegucigalpa",
+    },
+    {
+      quote:
+        "Remodelaron el local antes de volver a alquilarlo. El alcance quedó por escrito y la obra se entregó como se acordó.",
+      author: "Comerciante",
+      role: "Remodelación · Valle de Ángeles",
     },
   ],
 
+  galleryLead: "Tegucigalpa y los pueblos de pino alrededor de la capital.",
   gallery: [
     {
-      src: "/images/properties/torre-nivo/01.jpg",
-      alt: "Apartamento Torre Nivo — Las Lomas",
+      src: "/images/site/zones/tegucigalpa.jpg",
+      alt: "Centro de Tegucigalpa visto desde una ladera",
     },
     {
-      src: "/images/properties/hacienda-real/02.jpg",
-      alt: "Casa Residencial Hacienda Real — Cortés",
+      src: "/images/site/zones/tegucigalpa-noche.jpg",
+      alt: "Tegucigalpa de noche, desde lo alto de la ciudad",
     },
     {
-      src: "/images/properties/torre-cipreses/01.jpg",
-      alt: "Apartamento Torre Cipreses — San Ignacio",
+      src: "/images/site/zones/valle-de-angeles.jpg",
+      alt: "Puerta de madera y teja en Valle de Ángeles",
     },
     {
-      src: "/images/properties/consultorio-clinica/04.jpg",
-      alt: "Consultorio / clínica amueblada — Tegucigalpa",
+      src: "/images/site/zones/santa-lucia.jpg",
+      alt: "Santa Lucía, con pinos y techos de teja",
+    },
+  ],
+
+  coverageLead:
+    "Tegucigalpa, Valle de Ángeles, Santa Lucía y El Chimbo. La fila se mueve sola.",
+
+  photoCredits: [
+    {
+      label: "Tegucigalpa, Eduarg23, CC0",
+      href: "https://commons.wikimedia.org/wiki/File:Tegucigalpa-skyline-2024.jpg",
+    },
+    {
+      label: "Tegucigalpa de noche, Luis Alfredo Romero, CC BY-SA 4.0",
+      href: "https://commons.wikimedia.org/wiki/File:Tegucigalpa_Skyline_2020s.jpg",
+    },
+    {
+      label: "Valle de Ángeles, Luis Alfredo Romero, CC BY-SA 4.0",
+      href: "https://commons.wikimedia.org/wiki/File:Casa_Antigua_En_Valle_de_Angeles_Honduras.jpg",
+    },
+    {
+      label: "Santa Lucía, chamo estudio, CC BY-SA 2.0",
+      href: "https://commons.wikimedia.org/wiki/File:Honduras_Santa_Lucia.jpg",
     },
   ],
 
   sisterBrand: {
-    enabled: true,
-    eyebrow: "¿Buscas Airbnb?",
-    name: "AirHome HN",
-    blurb:
-      "Alojamientos amueblados de corta y mediana estadía. Marca aparte de Palermo Home (renta y venta de largo plazo).",
-    url: "https://airhomehn.com/",
-    cta: "Ver AirHome HN",
+    enabled: false,
+    eyebrow: "",
+    name: "",
+    blurb: "",
+    url: "",
+    cta: "",
+  },
+
+  english: {
+    eyebrow: "Real estate",
+    headline: "DIVERSA Bienes Raíces",
+    lede: "A Tegucigalpa agency for selling, developing, and managing property. The first consultation is free.",
+    aboutTitle: "About",
+    about: [
+      "DIVERSA sells and rents homes and commercial property, orders certified appraisals, and manages buildings for owners.",
+      "The same team can take on new construction and renovations. The office is at Centro de Negocios, Hotel Clarion, Tegucigalpa.",
+      "Coverage today is Tegucigalpa, Valle de Ángeles, Santa Lucía, and El Chimbo.",
+    ],
+    servicesTitle: "Services",
+    services: [
+      {
+        title: "Sales",
+        body: "Houses, apartments, land, and commercial property. The first consultation is free.",
+      },
+      {
+        title: "Rentals",
+        body: "We place and look for rentals, with a clear follow-up for owners and tenants.",
+      },
+      {
+        title: "Appraisals",
+        body: "Appraisals by certified engineers, for a purchase, a sale, a loan, or an investment decision.",
+      },
+      {
+        title: "Property management",
+        body: "We look after other people's buildings: rent, maintenance, and the relationship with the occupant.",
+      },
+      {
+        title: "Construction",
+        body: "New work, from the idea and the land through to handover.",
+      },
+      {
+        title: "Renovations",
+        body: "We renew a space so it can be lived in, rented, or sold in better shape.",
+      },
+    ],
+    processTitle: "How it works",
+    process: [
+      {
+        title: "Free consultation",
+        body: "Tell us what you are looking for. The first conversation is free and sets the area, budget, and next step.",
+      },
+      {
+        title: "Going to market",
+        body: "We prepare the listing, the visits, and the negotiation, for a sale or a rental.",
+      },
+      {
+        title: "Appraisal",
+        body: "When a reference value is needed, we coordinate it with certified engineers.",
+      },
+      {
+        title: "Management",
+        body: "If the property stays rented, we can manage it: collection, maintenance, and a report to the owner.",
+      },
+      {
+        title: "Construction and renovation",
+        body: "For new work or a renovation, we set the scope and follow it until the space is ready.",
+      },
+    ],
+    faqTitle: "Questions",
+    faqs: [
+      {
+        question: "Does the consultation cost anything?",
+        answer:
+          "No. The first consultation is free. We say plainly when an appraisal, management, or construction job has a separate fee.",
+      },
+      {
+        question: "Where do you work?",
+        answer:
+          "Mostly Tegucigalpa, and also Valle de Ángeles, Santa Lucía, and El Chimbo.",
+      },
+      {
+        question: "Do you do appraisals?",
+        answer: "Yes. Certified engineers prepare them for a purchase, a sale, or a loan.",
+      },
+      {
+        question: "Can you manage a property I already own?",
+        answer: "Yes. Management covers the rent, maintenance, and updates to the owner.",
+      },
+      {
+        question: "Do you build and renovate as well?",
+        answer: "Yes. Besides sales and rentals, we take on construction and renovations.",
+      },
+    ],
+    contactTitle: "Contact",
+    contactBody:
+      "Write on WhatsApp or email. Visits are by appointment at Hotel Clarion.",
+    cta: "WhatsApp",
   },
 
   sourceWebsite: "",
