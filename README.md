@@ -1,6 +1,6 @@
 # DIVERSA Bienes Raíces
 
-Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog includes the Santa Lucía house, the Cipreses apartment, a one-level house in Valle de Ángeles, and a rental house in Residencial El Sauce. The home page features the first three.
+Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog includes the Santa Lucía house, the Cipreses apartment, a one-level house in Valle de Ángeles, a rental in Residencial El Sauce, and a rental in Residencial Las Uvas. The home page features the first three.
 
 ---
 
