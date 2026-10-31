@@ -42,8 +42,13 @@ export async function PropertyPageComposer({
   const residentialRows =
     property.residential && supportsResidentialSpecs(property.propertyType)
       ? [
+          [labels.constructionArea, property.residential.constructionArea, "m²"],
           [labels.totalArea, property.residential.totalArea, "m²"],
-          [labels.lotSize, property.residential.lotSize, "m²"],
+          [
+            labels.lotSize,
+            property.residential.lotSize ?? property.residential.lotSizeLabel,
+            property.residential.lotSize !== undefined ? "m²" : undefined,
+          ],
           [labels.bedrooms, property.residential.bedrooms],
           [labels.bathrooms, property.residential.bathrooms],
           [labels.parking, property.residential.parking],

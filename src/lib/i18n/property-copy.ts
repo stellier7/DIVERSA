@@ -39,6 +39,7 @@ export const propertyCopy = {
   specLabels: {
     totalArea: "Área total",
     lotSize: "Terreno",
+    constructionArea: "Construcción",
     bedrooms: "Habitaciones",
     bathrooms: "Baños",
     parking: "Estacionamiento",

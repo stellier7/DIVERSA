@@ -70,6 +70,8 @@ export type PropertySeo = {
 export type ResidentialSpecs = {
   totalArea?: number;
   lotSize?: number;
+  /** Shown when the lot is not measured in square meters, for example varas cuadradas. */
+  lotSizeLabel?: string;
   constructionArea?: number;
   bedrooms?: number;
   bathrooms?: number;

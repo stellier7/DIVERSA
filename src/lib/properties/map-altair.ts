@@ -39,6 +39,12 @@ export type AltairRawProperty = {
   bedrooms?: string | null;
   bathrooms?: string | null;
   garage?: string | null;
+  constructionArea?: string | number | null;
+  /** Lot size already labeled, when it must not be shown as m². */
+  lotSizeLabel?: string | null;
+  highlights?: string[];
+  /** Parallel to `images`. Falls back to the title. */
+  imageAlts?: string[];
   code: string;
   coverImage: string;
   images: string[];
@@ -108,6 +114,12 @@ function uniqueSlug(raw: AltairRawProperty): string {
   return `${raw.slug}-${raw.id}`;
 }
 
+function imageAlt(raw: AltairRawProperty, src: string): string {
+  const index = raw.images.indexOf(src);
+  const listed = index >= 0 ? raw.imageAlts?.[index]?.trim() : undefined;
+  return listed || raw.title.trim();
+}
+
 function shortDescription(text: string): string {
   const line = text.split("\n").map((l) => l.trim()).find(Boolean) ?? text;
   return line.length > 160 ? `${line.slice(0, 157)}…` : line;
@@ -121,10 +133,7 @@ export function mapAltairProperty(
   const propertyType = mapPropertyType(raw.propertyType || "");
   const heroRaw = raw.coverImage || raw.images[0] || "";
   const hero = heroRaw ? normalizeWasiImageUrl(heroRaw) : "";
-  const gallery = raw.images
-    .filter((src) => src && src !== heroRaw)
-    .slice(0, 8)
-    .map((src) => normalizeWasiImageUrl(src));
+  const gallerySources = raw.images.filter((src) => src && src !== heroRaw);
 
   const listingTag =
     raw.listingType === "sale"
@@ -135,16 +144,32 @@ export function mapAltairProperty(
 
   const locationLabel = [raw.city, raw.region, raw.country].filter(Boolean).join(", ");
 
+  const bedrooms = parseNumber(raw.bedrooms);
+  const bathrooms = parseNumber(raw.bathrooms);
+  const parking = parseNumber(raw.garage);
+  const constructionArea = parseNumber(
+    raw.constructionArea == null ? undefined : String(raw.constructionArea),
+  );
+  const lotSizeLabel = raw.lotSizeLabel?.trim() || undefined;
   const residential =
-    parseNumber(raw.bedrooms) ||
-    parseNumber(raw.bathrooms) ||
-    parseNumber(raw.garage)
+    bedrooms || bathrooms || parking || constructionArea || lotSizeLabel
       ? {
-          bedrooms: parseNumber(raw.bedrooms),
-          bathrooms: parseNumber(raw.bathrooms),
-          parking: parseNumber(raw.garage),
+          bedrooms,
+          bathrooms,
+          parking,
+          constructionArea,
+          lotSizeLabel,
         }
       : undefined;
+
+  const highlights = (raw.highlights ?? [])
+    .map((item) => item.trim())
+    .filter(Boolean);
+  const condition = raw.condition?.trim();
+  const features = [
+    ...highlights,
+    ...(condition ? [`Estado: ${condition}`] : []),
+  ];
 
   return {
     id: raw.id,
@@ -169,19 +194,19 @@ export function mapAltairProperty(
     media: {
       heroImage: {
         src: hero || "https://images.wasi.co/empresas/b20190828112855.png",
-        alt: raw.title,
+        alt: heroRaw ? imageAlt(raw, heroRaw) : raw.title.trim(),
         width: 1200,
         height: 800,
       },
-      gallery: gallery.map((src) => ({
-        src,
-        alt: raw.title,
+      gallery: gallerySources.map((src) => ({
+        src: normalizeWasiImageUrl(src),
+        alt: imageAlt(raw, src),
         width: 1200,
         height: 800,
       })),
     },
     residential,
-    features: raw.condition ? [`Estado: ${raw.condition}`] : undefined,
+    features: features.length > 0 ? features : undefined,
     seo: {
       title: raw.title.trim(),
       description: shortDescription(raw.description),

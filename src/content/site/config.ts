@@ -1,6 +1,6 @@
 /**
  * DIVERSA Bienes Raíces — single editable CONFIG.
- * Listings live in src/data/properties.json and are still empty on purpose.
+ * Listings live in src/data/properties.json.
  */
 
 export const siteConfig = {
@@ -68,7 +68,7 @@ export const siteConfig = {
     { label: "ES", href: "/" },
   ],
 
-  homeFeaturedPropertySlugs: [] as string[],
+  homeFeaturedPropertySlugs: ["casa-lujo-santa-lucia-p001"],
 
   social: {
     instagram: "https://www.instagram.com/diversa.br.hn/",
