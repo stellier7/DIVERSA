@@ -6,7 +6,7 @@ export type CoverageCity = {
   image?: { src: string; alt: string };
 };
 
-/** Service areas. El Chimbo has no photograph yet, so the card uses the brand panel. */
+/** Service areas. El Chimbo has no town photograph; its card uses the first matching listing. */
 export const coverageCities: CoverageCity[] = [
   {
     label: "Tegucigalpa",
