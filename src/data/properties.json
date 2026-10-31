@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye la casa de Santa Lucía, el apartamento en Cipreses y una casa en Valle de Ángeles.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles y Residencial El Sauce, y un apartamento en Cipreses.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 3,
+    "total": 4,
     "forSale": 2,
-    "forRent": 2
+    "forRent": 3
   },
   "properties": [
     {
@@ -234,6 +234,93 @@
         "Segunda habitación",
         "Baño completo",
         "Patio con pila y área de lavandería"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p004",
+      "slug": "casa-renta-el-sauce",
+      "url": "/properties/casa-renta-el-sauce-p004",
+      "title": "Casa en renta en Residencial El Sauce",
+      "description": "Casa en renta en Residencial El Sauce, Tegucigalpa, moderna, con finos acabados y en doble circuito cerrado.\n\nLa renta es de US$1,850 mensuales. La casa está en Residencial El Sauce y el acceso es por doble circuito cerrado.\n\nTiene tres habitaciones, cada una con baño privado. La habitación principal incluye terraza y walk-in closet. También hay sala familiar, estudio, baño de visitas, sala y comedor en ambiente abierto, cocina con alacena, cuarto de empleada con baño, área de lavandería, área social con jardín y estacionamiento para dos vehículos.\n\nEl número de baños del resumen cuenta los tres baños privados de las habitaciones. El baño de visitas y el baño del cuarto de empleada van aparte.",
+      "listingType": "rent",
+      "propertyType": "Casa",
+      "priceLabel": "US$1,850 / mes",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "neighborhood": "Residencial El Sauce",
+      "condition": "",
+      "bedrooms": "3",
+      "bathrooms": "3",
+      "garage": "2",
+      "highlights": [
+        "Tres habitaciones con baño privado",
+        "Habitación principal con terraza y walk-in closet",
+        "Sala familiar",
+        "Estudio",
+        "Baño para visitas",
+        "Sala y comedor en ambiente abierto",
+        "Cocina con alacena",
+        "Cuarto de empleada con baño",
+        "Área de lavandería",
+        "Área social con jardín",
+        "Doble circuito cerrado",
+        "Finos acabados"
+      ],
+      "code": "DV-TG-004",
+      "coverImage": "/images/properties/casa-el-sauce/01.jpg",
+      "images": [
+        "/images/properties/casa-el-sauce/01.jpg",
+        "/images/properties/casa-el-sauce/02.jpg",
+        "/images/properties/casa-el-sauce/03.jpg",
+        "/images/properties/casa-el-sauce/04.jpg",
+        "/images/properties/casa-el-sauce/05.jpg",
+        "/images/properties/casa-el-sauce/06.jpg",
+        "/images/properties/casa-el-sauce/07.jpg",
+        "/images/properties/casa-el-sauce/08.jpg",
+        "/images/properties/casa-el-sauce/09.jpg",
+        "/images/properties/casa-el-sauce/10.jpg",
+        "/images/properties/casa-el-sauce/11.jpg",
+        "/images/properties/casa-el-sauce/12.jpg",
+        "/images/properties/casa-el-sauce/13.jpg",
+        "/images/properties/casa-el-sauce/14.jpg",
+        "/images/properties/casa-el-sauce/15.jpg",
+        "/images/properties/casa-el-sauce/16.jpg",
+        "/images/properties/casa-el-sauce/17.jpg",
+        "/images/properties/casa-el-sauce/18.jpg",
+        "/images/properties/casa-el-sauce/19.jpg",
+        "/images/properties/casa-el-sauce/20.jpg",
+        "/images/properties/casa-el-sauce/21.jpg",
+        "/images/properties/casa-el-sauce/22.jpg",
+        "/images/properties/casa-el-sauce/23.jpg",
+        "/images/properties/casa-el-sauce/24.jpg"
+      ],
+      "imageAlts": [
+        "Sala a doble altura con escalera y barandal de vidrio",
+        "Cocina con isla de granito y tarja doble",
+        "Sala y comedor en ambiente abierto",
+        "Área social techada con jardín",
+        "Jardín y terraza cubierta",
+        "Sala con puertas de vidrio hacia el jardín",
+        "Jardín del área social",
+        "Escalera y pasillo de la planta alta",
+        "Planta alta con barandal de vidrio",
+        "Habitación de la planta alta",
+        "Cocina con isla, alacena y gabinetes",
+        "Estacionamiento con portón",
+        "Sala, comedor y cocina en un solo ambiente",
+        "Habitación",
+        "Entrada vehicular con portón",
+        "Habitación con aire acondicionado",
+        "Walk-in closet con entrepaños de madera",
+        "Walk-in closet con estantería blanca",
+        "Habitación con ventana y aire acondicionado",
+        "Baño con lavamanos sobre tope de granito",
+        "Habitación con clóset de madera",
+        "Baño con ducha de vidrio",
+        "Pasillo de la planta baja",
+        "Baño con ducha y lavamanos"
       ],
       "attributes": {}
     }
