@@ -138,12 +138,14 @@ export function mapAltairProperty(
   const hero = heroRaw ? normalizeWasiImageUrl(heroRaw) : "";
   const gallerySources = raw.images.filter((src) => src && src !== heroRaw);
 
-  const listingTag =
-    raw.listingType === "sale"
-      ? "venta"
+  const listingTags =
+    raw.listingType === "both"
+      ? ["venta", "alquiler"]
       : raw.listingType === "rent"
-        ? "alquiler"
-        : "listado";
+        ? ["alquiler"]
+        : raw.listingType === "sale"
+          ? ["venta"]
+          : ["listado"];
 
   const locationLabel = [raw.neighborhood, raw.city, raw.region, raw.country]
     .map((part) => part?.trim())
@@ -188,7 +190,7 @@ export function mapAltairProperty(
     propertyType,
     status: "available",
     featured,
-    tags: [listingTag, raw.propertyType?.toLowerCase() ?? "inmueble", raw.code].filter(
+    tags: [...listingTags, raw.propertyType?.toLowerCase() ?? "inmueble", raw.code].filter(
       (tag): tag is string => Boolean(tag?.trim()),
     ),
     location: {

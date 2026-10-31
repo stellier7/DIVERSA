@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye la casa de lujo en Santa Lucía y un apartamento en Cipreses de San Ignacio.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye la casa de Santa Lucía, el apartamento en Cipreses y una casa en Valle de Ángeles.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 2,
-    "forSale": 1,
-    "forRent": 1
+    "total": 3,
+    "forSale": 2,
+    "forRent": 2
   },
   "properties": [
     {
@@ -178,6 +178,62 @@
         "Habitación con ventana y aire acondicionado",
         "Área de lavandería",
         "Baño completo con ducha"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p003",
+      "slug": "casa-un-nivel-valle-de-angeles",
+      "url": "/properties/casa-un-nivel-valle-de-angeles-p003",
+      "title": "Casa de un nivel en Valle de Ángeles",
+      "description": "Casa de un nivel en venta o alquiler en Valle de Ángeles, a solo 4 minutos del centro.\n\nLa venta es de L 2,300,000. El alquiler es de L 11,000 mensuales y, en renta, la casa se entrega full amueblada. Queda en una zona residencial con calles pavimentadas, amplios espacios y a pocos minutos del centro de Valle de Ángeles.\n\nLa distribución incluye sala y comedor amplios, cocina con muebles y desayunador, dos habitaciones, un baño completo, área de lavandería, terraza social techada, patio y estacionamiento para dos vehículos. También cuenta con tanque de almacenamiento de agua y cisterna.\n\nEs una casa de un solo nivel, cómoda y con espacios agradables para disfrutar en familia.",
+      "listingType": "both",
+      "propertyType": "Casa",
+      "priceLabel": "Venta L 2,300,000 · Alquiler L 11,000 / mes, full amueblada",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Valle de Ángeles",
+      "condition": "",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "garage": "2",
+      "highlights": [
+        "Sala y comedor amplios",
+        "Cocina con muebles y desayunador",
+        "Área de lavandería",
+        "Terraza social techada",
+        "Patio",
+        "Tanque de almacenamiento de agua",
+        "Cisterna",
+        "Alquiler full amueblada",
+        "Calles pavimentadas",
+        "A 4 minutos del centro de Valle de Ángeles"
+      ],
+      "code": "DV-VA-003",
+      "coverImage": "/images/properties/casa-valle-de-angeles/01.jpg",
+      "images": [
+        "/images/properties/casa-valle-de-angeles/01.jpg",
+        "/images/properties/casa-valle-de-angeles/02.jpg",
+        "/images/properties/casa-valle-de-angeles/03.jpg",
+        "/images/properties/casa-valle-de-angeles/04.jpg",
+        "/images/properties/casa-valle-de-angeles/05.jpg",
+        "/images/properties/casa-valle-de-angeles/06.jpg",
+        "/images/properties/casa-valle-de-angeles/07.jpg",
+        "/images/properties/casa-valle-de-angeles/08.jpg",
+        "/images/properties/casa-valle-de-angeles/09.jpg",
+        "/images/properties/casa-valle-de-angeles/10.jpg"
+      ],
+      "imageAlts": [
+        "Fachada de la casa con portón y calle empedrada en Valle de Ángeles",
+        "Sala con vista hacia la cocina y el desayunador",
+        "Sala amplia",
+        "Comedor",
+        "Habitación",
+        "Cocina con muebles de madera",
+        "Desayunador de la cocina",
+        "Segunda habitación",
+        "Baño completo",
+        "Patio con pila y área de lavandería"
       ],
       "attributes": {}
     }

@@ -71,6 +71,7 @@ export const siteConfig = {
   homeFeaturedPropertySlugs: [
     "casa-lujo-santa-lucia-p001",
     "apartamento-cipreses-san-ignacio-p002",
+    "casa-un-nivel-valle-de-angeles-p003",
   ],
 
   social: {
