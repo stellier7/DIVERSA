@@ -1,6 +1,6 @@
 # DIVERSA Bienes Raíces
 
-Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog includes the Santa Lucía house, the Cipreses apartment, a one-level house in Valle de Ángeles, a rental house and a one-bedroom apartment in Residencial El Sauce, a rental in Residencial Las Uvas, a rental in El Chimbo, a lot in Residencial Mirador de los Hidalgos, and offices in Torre Agalta. The home page features the first three.
+Real-estate site for DIVERSA, started from the Palermo Home structure. Brand copy, colors, contact, and zones are DIVERSA. The catalog includes the Santa Lucía house, the Cipreses apartment, a one-level house in Valle de Ángeles, a rental house and a one-bedroom apartment in Residencial El Sauce, a rental in Residencial Las Uvas, a rental house and a furnished one-bedroom apartment in El Chimbo, a lot in Residencial Mirador de los Hidalgos, and offices in Torre Agalta. The home page features the first three.
 
 ---
 

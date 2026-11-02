@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, apartamentos en Cipreses y Residencial El Sauce, un terreno en Mirador de los Hidalgos y oficinas en Torre Agalta.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, apartamentos en Cipreses, Residencial El Sauce y El Chimbo, un terreno en Mirador de los Hidalgos y oficinas en Torre Agalta.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 9,
+    "total": 10,
     "forSale": 3,
-    "forRent": 7
+    "forRent": 8
   },
   "properties": [
     {
@@ -655,6 +655,58 @@
         "Sala-comedor hacia la cocineta",
         "Baño completo con ducha",
         "Afiche del apartamento para dama en Residencial El Sauce"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p010",
+      "slug": "apartamento-dama-el-chimbo",
+      "url": "/properties/apartamento-dama-el-chimbo-p010",
+      "title": "Apartamento amueblado para dama en El Chimbo",
+      "description": "Apartamento amueblado de una habitación en renta en El Chimbo, km. 7 de la carretera a Santa Lucía, por L 8,500 al mes.\n\nLa renta incluye agua, energía eléctrica, cable, internet y la seguridad del circuito cerrado. El contrato mínimo es de un año y el apartamento es para una dama.\n\nTiene una habitación, sala-comedor, un baño completo y estacionamiento para un vehículo. Afuera hay una amplia área verde con kiosco y área para barbacoa.",
+      "listingType": "rent",
+      "propertyType": "Apartamento",
+      "priceLabel": "L 8,500 / mes",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "El Chimbo",
+      "neighborhood": "Circuito cerrado, km. 7 carretera a Santa Lucía",
+      "condition": "",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "garage": "1",
+      "highlights": [
+        "Amueblado",
+        "Para una dama",
+        "Incluye agua, energía eléctrica, cable e internet",
+        "Seguridad del circuito cerrado",
+        "Contrato mínimo de 1 año",
+        "Sala-comedor",
+        "Amplia área verde con kiosco",
+        "Área para barbacoa",
+        "Estacionamiento para 1 vehículo"
+      ],
+      "code": "DV-EC-010",
+      "coverImage": "/images/properties/apartamento-dama-el-chimbo/01.jpg",
+      "images": [
+        "/images/properties/apartamento-dama-el-chimbo/01.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/02.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/03.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/04.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/05.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/06.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/07.jpg",
+        "/images/properties/apartamento-dama-el-chimbo/08.jpg"
+      ],
+      "imageAlts": [
+        "Fachada con arcos y jardín del apartamento",
+        "Patio con fuente, escalones y área verde",
+        "Sala con cortinas y arco hacia el jardín",
+        "Cocineta y mesa de comedor",
+        "Cocina con refrigerador",
+        "Escalera y puerta de vidrio",
+        "Habitación amueblada",
+        "Baño completo con ducha"
       ],
       "attributes": {}
     }
