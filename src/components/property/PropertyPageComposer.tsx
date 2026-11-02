@@ -59,6 +59,8 @@ export async function PropertyPageComposer({
   const commercialRows =
     property.commercial && supportsCommercialSpecs(property.propertyType)
       ? [
+          [labels.totalArea, property.commercial.area, "m²"],
+          [labels.parking, property.commercial.parking],
           [labels.useClass, property.commercial.useClass],
           [labels.floors, property.commercial.floors],
           [labels.units, property.commercial.units],

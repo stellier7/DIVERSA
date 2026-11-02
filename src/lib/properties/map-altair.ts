@@ -58,6 +58,14 @@ export type AltairRawProperty = {
   attributes: Record<string, string | undefined>;
 };
 
+const COMMERCIAL_PROPERTY_TYPES = new Set<PropertyType>([
+  "commercial",
+  "office",
+  "retail",
+  "hotel",
+  "industrial",
+]);
+
 function mapPropertyType(label: string): PropertyType {
   const key = label.toLowerCase();
   if (key.includes("apartamento") || key.includes("penthouse")) return "apartment";
@@ -165,14 +173,23 @@ export function mapAltairProperty(
   const lotSizeLabel = raw.lotSizeLabel?.trim() || undefined;
   const frontageLabel = raw.frontageLabel?.trim() || undefined;
   const depthLabel = raw.depthLabel?.trim() || undefined;
+  const isCommercial = COMMERCIAL_PROPERTY_TYPES.has(propertyType);
   const residential =
-    bedrooms || bathrooms || parking || constructionArea || lotSizeLabel
+    !isCommercial &&
+    (bedrooms || bathrooms || parking || constructionArea || lotSizeLabel)
       ? {
           bedrooms,
           bathrooms,
           parking,
           constructionArea,
           lotSizeLabel,
+        }
+      : undefined;
+  const commercial =
+    isCommercial && (constructionArea !== undefined || parking !== undefined)
+      ? {
+          ...(constructionArea !== undefined ? { area: constructionArea } : {}),
+          ...(parking !== undefined ? { parking } : {}),
         }
       : undefined;
   const land =
@@ -230,6 +247,7 @@ export function mapAltairProperty(
       })),
     },
     residential,
+    commercial,
     land,
     features: features.length > 0 ? features : undefined,
     amenities: amenities.length > 0 ? amenities : undefined,

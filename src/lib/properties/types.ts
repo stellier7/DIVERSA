@@ -83,6 +83,9 @@ export type CommercialSpecs = {
   useClass?: string;
   floors?: number;
   units?: number;
+  /** Interior area in square meters. */
+  area?: number;
+  parking?: number;
 };
 
 export type LandSpecs = {

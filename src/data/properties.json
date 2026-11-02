@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, un apartamento en Cipreses y un terreno en Mirador de los Hidalgos.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, un apartamento en Cipreses, un terreno en Mirador de los Hidalgos y oficinas en Torre Agalta.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 7,
+    "total": 8,
     "forSale": 3,
-    "forRent": 5
+    "forRent": 6
   },
   "properties": [
     {
@@ -553,6 +553,55 @@
         "Vista aérea del lote marcado junto a la calle",
         "Vista aérea del lote en diagonal",
         "Lote plano marcado desde la acera"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p008",
+      "slug": "oficinas-torre-agalta",
+      "url": "/properties/oficinas-torre-agalta-p008",
+      "title": "Oficinas en renta en Torre Agalta",
+      "description": "Oficinas en renta en Torre Agalta, sobre el Boulevard Morazán, Tegucigalpa, en una zona de negocios y comercio.\n\nHay dos opciones de 17 m², cada una con un parqueo y acceso directo desde el parqueo con llave digital. La oficina amueblada se alquila en L 16,000 mensuales e incluye aire acondicionado, TV con conexión HDMI, mesa de reunión para 4 personas, mueble gavetero, lámpara y pizarra de vidrio. La oficina sin muebles se alquila en L 10,000 mensuales.\n\nEl mantenimiento tiene un costo adicional de L 2,000. El punto queda en una zona de fácil acceso, pensada para recibir y atender clientes con comodidad y una buena imagen corporativa.",
+      "listingType": "rent",
+      "propertyType": "Oficina",
+      "priceLabel": "Amueblada L 16,000 / mes · Sin muebles L 10,000 / mes",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "neighborhood": "Torre Agalta, Blvd. Morazán",
+      "condition": "",
+      "constructionArea": "17",
+      "garage": "1",
+      "highlights": [
+        "Oficina amueblada en L 16,000 mensuales",
+        "Oficina sin muebles en L 10,000 mensuales",
+        "Mantenimiento adicional de L 2,000",
+        "17 m²",
+        "Aire acondicionado en la oficina amueblada",
+        "1 parqueo",
+        "Acceso directo desde el parqueo con llave digital",
+        "TV con conexión HDMI",
+        "Mesa de reunión para 4 personas",
+        "Mueble gavetero, lámpara y pizarra de vidrio",
+        "Boulevard Morazán, zona de negocios y comercio"
+      ],
+      "code": "DV-TG-008",
+      "coverImage": "/images/properties/oficinas-torre-agalta/01.jpg",
+      "images": [
+        "/images/properties/oficinas-torre-agalta/01.jpg",
+        "/images/properties/oficinas-torre-agalta/02.jpg",
+        "/images/properties/oficinas-torre-agalta/03.jpg",
+        "/images/properties/oficinas-torre-agalta/04.jpg",
+        "/images/properties/oficinas-torre-agalta/05.jpg",
+        "/images/properties/oficinas-torre-agalta/06.jpg"
+      ],
+      "imageAlts": [
+        "Sala de reunión amueblada con televisor y aire acondicionado",
+        "Sala de reunión con pizarra de vidrio y puerta",
+        "Mesa de reunión con sillas y cuadro",
+        "Oficina vacía",
+        "Oficina vacía",
+        "Oficina vacía con puerta y tomacorrientes"
       ],
       "attributes": {}
     }
