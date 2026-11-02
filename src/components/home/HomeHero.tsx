@@ -4,6 +4,7 @@ import Link from "next/link";
 import { HeroCatalogSearch } from "@/components/home/HeroCatalogSearch";
 import { ParallaxMedia } from "@/components/motion/ParallaxMedia";
 import { Container } from "@/components/layout/Container";
+import { SocialButtons } from "@/components/layout/SocialButtons";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/content/site/config";
 
@@ -61,6 +62,7 @@ export function HomeHero({ heroImage }: HomeHeroProps) {
           >
             {siteConfig.heroAboutLabel}
           </Link>
+          <SocialButtons />
         </div>
       </Container>
     </ParallaxMedia>

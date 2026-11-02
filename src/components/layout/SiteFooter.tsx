@@ -1,17 +1,11 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { siteConfig } from "@/content/site/config";
-import { buildWhatsAppUrl } from "@/lib/contact/whatsapp";
+import { SocialButtons } from "@/components/layout/SocialButtons";
 import { Container } from "./Container";
-
-const phoneHref = (display: string) =>
-  `tel:+${display.replace(/\D/g, "").replace(/^0+/, "")}`;
 
 export async function SiteFooter() {
   const year = new Date().getFullYear();
-  const whatsappUrl = buildWhatsAppUrl();
-  const secondaryUrl = buildWhatsAppUrl(undefined, siteConfig.whatsappSecondary.e164);
-  const office = siteConfig.offices[0];
   const headerList = await headers();
   const pathname = headerList.get("x-pathname") ?? "/";
   const english = pathname === "/en" || pathname.startsWith("/en/");
@@ -19,66 +13,8 @@ export async function SiteFooter() {
 
   return (
     <footer className="border-t border-line bg-surface" aria-label="Pie de página">
-      <Container className="flex flex-col gap-5 py-5 md:flex-row md:items-start md:justify-between md:gap-8 md:py-6">
-        <div className="max-w-xl space-y-1 text-sm leading-snug text-muted">
-          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <a
-              className="focus-ring inline-flex items-center py-0.5 font-medium text-accent transition-colors hover:text-accent-hover"
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp · {siteConfig.whatsapp.display}
-            </a>
-            <a
-              className="focus-ring inline-flex items-center py-0.5 font-medium text-accent transition-colors hover:text-accent-hover"
-              href={secondaryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp · {siteConfig.whatsappSecondary.display}
-            </a>
-            <a
-              className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
-              href={phoneHref(siteConfig.phone)}
-            >
-              Tel. {siteConfig.phone}
-            </a>
-            <a
-              className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
-              href={`mailto:${siteConfig.contactEmail}`}
-            >
-              {siteConfig.contactEmail}
-            </a>
-            {siteConfig.social?.instagram ? (
-              <a
-                className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {siteConfig.social.instagramHandle}
-              </a>
-            ) : null}
-            {siteConfig.social.facebook ? (
-              <a
-                className="focus-ring inline-flex items-center py-0.5 text-accent transition-colors hover:text-accent-hover"
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {siteConfig.social.facebookHandle}
-              </a>
-            ) : null}
-          </p>
-          {office ? (
-            <p className="leading-snug">
-              <span className="font-medium text-foreground">{office.city}</span>
-              {" — "}
-              {office.address}
-            </p>
-          ) : null}
-        </div>
+      <Container className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between md:py-6">
+        <SocialButtons />
         <nav aria-label="Navegación del pie" className="md:text-right">
           <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm md:justify-end">
             {nav.map((item) => (

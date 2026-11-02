@@ -8,44 +8,32 @@ export function HomeLocation() {
   if (!office) return null;
 
   return (
-    <Section id="ubicacion" className="bg-surface/70">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-16">
-        <RevealOnScroll>
-          <p className="type-meta-caps text-accent">Ubicación</p>
-          <h2 className="type-display-section mt-3 text-accent">{office.city}</h2>
-          <p className="prose-editorial mt-5">{office.address}</p>
-          <div className="mt-8">
-            <Button
-              href={office.mapLink}
-              variant="outline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Abrir en Maps
-            </Button>
+    <Section id="ubicacion" className="bg-surface/70 !py-10 sm:!py-12">
+      <RevealOnScroll className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="max-w-xl text-sm leading-snug text-muted">{office.address}</p>
+        <Button
+          href={office.mapLink}
+          variant="outline"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0"
+        >
+          Abrir en Maps
+        </Button>
+      </RevealOnScroll>
+      {office.mapEmbedUrl ? (
+        <RevealOnScroll delayMs={80} className="mt-4">
+          <div className="relative h-36 overflow-hidden rounded-[var(--radius-md)] border border-line sm:h-44">
+            <iframe
+              title={`Mapa — ${office.city}`}
+              src={office.mapEmbedUrl}
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </RevealOnScroll>
-        <RevealOnScroll delayMs={100}>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[var(--radius-lg)] border border-line bg-[color-mix(in_srgb,var(--accent)_8%,var(--surface))]">
-            {office.mapEmbedUrl ? (
-              <iframe
-                title={`Mapa — ${office.city}`}
-                src={office.mapEmbedUrl}
-                className="absolute inset-0 h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center">
-                <p className="type-meta-caps text-accent">Tegucigalpa</p>
-                <p className="prose-editorial max-w-sm text-muted">
-                  Atención en la capital · visitas privadas por WhatsApp.
-                </p>
-              </div>
-            )}
-          </div>
-        </RevealOnScroll>
-      </div>
+      ) : null}
     </Section>
   );
 }
