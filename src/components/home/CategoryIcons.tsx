@@ -59,12 +59,12 @@ export function CategoryIcon({ name, className = "h-7 w-7" }: CategoryIconProps)
           <path {...stroke} d="M14 27v-4h4v4" />
         </svg>
       );
-    case "building":
+    case "resident":
       return (
         <svg viewBox="0 0 32 32" className={className} aria-hidden>
-          <path {...stroke} d="M10 27V6h12v21" />
+          <circle {...stroke} cx="16" cy="9" r="3.2" />
+          <path {...stroke} d="M9.5 24.5c.8-4 3.2-6 6.5-6s5.7 2 6.5 6" />
           <path {...stroke} d="M6 27h20" />
-          <path {...stroke} d="M13 10h2M17 10h2M13 14h2M17 14h2M13 18h2M17 18h2M13 22h2M17 22h2" />
         </svg>
       );
     default: {

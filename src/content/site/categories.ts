@@ -4,7 +4,7 @@ export type HomeCategoryIcon =
   | "commercial"
   | "land"
   | "office"
-  | "building";
+  | "resident";
 
 export type HomeCategory = {
   label: string;
@@ -39,9 +39,8 @@ export const homeCategories: HomeCategory[] = [
     href: "/properties?type=office",
   },
   {
-    label: "Edificio",
-    icon: "building",
-    // Catalog maps “Edificio” into commercial; search keeps the intent clear.
-    href: "/properties?q=edificio",
+    label: "Solo para dama",
+    icon: "resident",
+    href: "/properties?q=dama",
   },
 ];
