@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, y un apartamento en Cipreses.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, un apartamento en Cipreses y un terreno en Mirador de los Hidalgos.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,8 +17,8 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 6,
-    "forSale": 2,
+    "total": 7,
+    "forSale": 3,
     "forRent": 5
   },
   "properties": [
@@ -509,6 +509,50 @@
         "Baño",
         "Ducha",
         "Habitación con techo de madera"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p007",
+      "slug": "terreno-mirador-hidalgos",
+      "url": "/properties/terreno-mirador-hidalgos-p007",
+      "title": "Terreno plano en Residencial Mirador de los Hidalgos",
+      "description": "Terreno totalmente plano en venta en Residencial Mirador de los Hidalgos, zona sur de Tegucigalpa, dentro de un circuito cerrado de alto perfil.\n\nEl precio de venta es L 2,250,000. El lote mide 250.61 varas cuadradas (v²), con 9 metros de frente y 19.4 metros de fondo.\n\nEl terreno está completamente plano, en una residencial privada con circuito cerrado. La zona es de alta plusvalía y de excelente ubicación, pensada para construir una casa en un entorno exclusivo y seguro.",
+      "listingType": "sale",
+      "propertyType": "Terreno",
+      "priceLabel": "L 2,250,000",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "neighborhood": "Residencial Mirador de los Hidalgos",
+      "condition": "",
+      "lotSizeLabel": "250.61 v²",
+      "frontageLabel": "9 m",
+      "depthLabel": "19.4 m",
+      "highlights": [
+        "Terreno completamente plano",
+        "250.61 v²",
+        "9 metros de frente",
+        "19.4 metros de fondo",
+        "Residencial privada y circuito cerrado de alto perfil",
+        "Zona sur de Tegucigalpa",
+        "Zona de alta plusvalía",
+        "Excelente ubicación",
+        "Ideal para construir"
+      ],
+      "code": "DV-TG-007",
+      "coverImage": "/images/properties/terreno-mirador-hidalgos/01.jpg",
+      "images": [
+        "/images/properties/terreno-mirador-hidalgos/01.jpg",
+        "/images/properties/terreno-mirador-hidalgos/02.jpg",
+        "/images/properties/terreno-mirador-hidalgos/03.jpg",
+        "/images/properties/terreno-mirador-hidalgos/04.jpg"
+      ],
+      "imageAlts": [
+        "Afiche del terreno plano en Residencial Mirador de los Hidalgos",
+        "Vista aérea del lote marcado junto a la calle",
+        "Vista aérea del lote en diagonal",
+        "Lote plano marcado desde la acera"
       ],
       "attributes": {}
     }

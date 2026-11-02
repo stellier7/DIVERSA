@@ -44,6 +44,10 @@ export type AltairRawProperty = {
   constructionArea?: string | number | null;
   /** Lot size already labeled, when it must not be shown as m². */
   lotSizeLabel?: string | null;
+  /** Street frontage already labeled, for example "9 m". */
+  frontageLabel?: string | null;
+  /** Lot depth already labeled, for example "19.4 m". */
+  depthLabel?: string | null;
   highlights?: string[];
   amenities?: string[];
   /** Parallel to `images`. Falls back to the title. */
@@ -159,6 +163,8 @@ export function mapAltairProperty(
     raw.constructionArea == null ? undefined : String(raw.constructionArea),
   );
   const lotSizeLabel = raw.lotSizeLabel?.trim() || undefined;
+  const frontageLabel = raw.frontageLabel?.trim() || undefined;
+  const depthLabel = raw.depthLabel?.trim() || undefined;
   const residential =
     bedrooms || bathrooms || parking || constructionArea || lotSizeLabel
       ? {
@@ -167,6 +173,15 @@ export function mapAltairProperty(
           parking,
           constructionArea,
           lotSizeLabel,
+        }
+      : undefined;
+  const land =
+    (propertyType === "land" || propertyType === "lot" || propertyType === "development") &&
+    (lotSizeLabel || frontageLabel || depthLabel)
+      ? {
+          lotSizeLabel,
+          frontageLabel,
+          depthLabel,
         }
       : undefined;
 
@@ -215,6 +230,7 @@ export function mapAltairProperty(
       })),
     },
     residential,
+    land,
     features: features.length > 0 ? features : undefined,
     amenities: amenities.length > 0 ? amenities : undefined,
     seo: {

@@ -49,5 +49,7 @@ export const propertyCopy = {
     units: "Unidades",
     zoning: "Zonificación",
     buildableArea: "Área construible",
+    frontage: "Frente",
+    depth: "Fondo",
   },
 } as const;

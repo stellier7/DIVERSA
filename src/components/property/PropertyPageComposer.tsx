@@ -68,6 +68,15 @@ export async function PropertyPageComposer({
   const landRows =
     property.land && supportsLandSpecs(property.propertyType)
       ? [
+          [
+            labels.lotSize,
+            property.residential?.lotSize ??
+              property.land.lotSizeLabel ??
+              property.residential?.lotSizeLabel,
+            property.residential?.lotSize !== undefined ? "m²" : undefined,
+          ],
+          [labels.frontage, property.land.frontageLabel],
+          [labels.depth, property.land.depthLabel],
           [labels.zoning, property.land.zoning],
           [labels.buildableArea, property.land.buildableArea, "m²"],
         ]

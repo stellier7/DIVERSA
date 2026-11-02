@@ -88,6 +88,12 @@ export type CommercialSpecs = {
 export type LandSpecs = {
   zoning?: string;
   buildableArea?: number;
+  /** Lot size already labeled, when it must not be shown as m². */
+  lotSizeLabel?: string;
+  /** Street frontage already labeled, for example "9 m". */
+  frontageLabel?: string;
+  /** Lot depth already labeled, for example "19.4 m". */
+  depthLabel?: string;
 };
 
 export type InvestmentSpecs = {
