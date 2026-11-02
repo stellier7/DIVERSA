@@ -224,7 +224,7 @@ export const siteConfig = {
     },
     {
       src: "/images/site/zones/tegucigalpa-noche.jpg",
-      alt: "Tegucigalpa de noche, desde lo alto de la ciudad",
+      alt: "Tegucigalpa de noche, luces de la ciudad bajo un cielo morado",
     },
     {
       src: "/images/site/zones/valle-de-angeles.jpg",
