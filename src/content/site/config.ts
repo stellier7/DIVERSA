@@ -174,7 +174,7 @@ export const siteConfig = {
     eyebrow: "Nosotros",
     headline: "Comercialización, desarrollo y administración",
     portrait: "/images/site/about.jpg",
-    portraitAlt: "Artesanías y puerta tallada en Valle de Ángeles",
+    portraitAlt: "Hotel Clarion en Tegucigalpa, donde está la oficina",
     paragraphs: [
       "DIVERSA Bienes Raíces es una agencia en Tegucigalpa. Comercializamos, desarrollamos y administramos bienes inmuebles, y la asesoría inicial es gratuita.",
       "Vendemos y alquilamos, coordinamos avalúos con ingenieros certificados y acompañamos construcción y remodelaciones. La oficina está en el Centro de Negocios del Hotel Clarion.",
