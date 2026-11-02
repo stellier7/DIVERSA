@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "DIVERSA Bienes Raíces",
-    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, un apartamento en Cipreses, un terreno en Mirador de los Hidalgos y oficinas en Torre Agalta.",
+    "description": "Agencia de bienes raíces en Tegucigalpa. El catálogo incluye casas en Santa Lucía, Valle de Ángeles, El Chimbo, El Sauce y Las Uvas, apartamentos en Cipreses y Residencial El Sauce, un terreno en Mirador de los Hidalgos y oficinas en Torre Agalta.",
     "logo": "/images/site/logo-diversa.png",
     "address": {
       "street": "Centro de Negocios Hotel Clarion",
@@ -17,9 +17,9 @@
     "scrapedAt": ""
   },
   "stats": {
-    "total": 8,
+    "total": 9,
     "forSale": 3,
-    "forRent": 6
+    "forRent": 7
   },
   "properties": [
     {
@@ -602,6 +602,59 @@
         "Oficina vacía",
         "Oficina vacía",
         "Oficina vacía con puerta y tomacorrientes"
+      ],
+      "attributes": {}
+    },
+    {
+      "id": "p009",
+      "slug": "apartamento-dama-el-sauce",
+      "url": "/properties/apartamento-dama-el-sauce-p009",
+      "title": "Apartamento para dama en Residencial El Sauce",
+      "description": "Apartamento de una habitación en renta en Residencial El Sauce, Tegucigalpa, solo para una dama, por L 10,000 al mes.\n\nLa renta incluye energía eléctrica, agua potable, internet, seguridad y el mantenimiento de las áreas sociales. El contrato es por un año. Se renta únicamente para una persona, ideal para una dama sola y preferiblemente estudiante. No se aceptan mascotas.\n\nEl apartamento tiene una habitación, un baño completo con agua caliente, sala-comedor, cocineta, entrada independiente y estacionamiento para un vehículo.",
+      "listingType": "rent",
+      "propertyType": "Apartamento",
+      "priceLabel": "L 10,000 / mes",
+      "country": "Honduras",
+      "region": "Francisco Morazán",
+      "city": "Tegucigalpa",
+      "neighborhood": "Residencial El Sauce",
+      "condition": "",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "garage": "1",
+      "highlights": [
+        "Solo para una dama, preferiblemente estudiante",
+        "Se renta únicamente para una persona",
+        "No se aceptan mascotas",
+        "Contrato por 1 año",
+        "Incluye energía eléctrica, agua potable e internet",
+        "Seguridad",
+        "Mantenimiento de áreas sociales",
+        "Baño completo con agua caliente",
+        "Sala-comedor",
+        "Cocineta",
+        "Entrada independiente",
+        "Estacionamiento para 1 vehículo"
+      ],
+      "code": "DV-TG-009",
+      "coverImage": "/images/properties/apartamento-dama-el-sauce/01.jpg",
+      "images": [
+        "/images/properties/apartamento-dama-el-sauce/01.jpg",
+        "/images/properties/apartamento-dama-el-sauce/02.jpg",
+        "/images/properties/apartamento-dama-el-sauce/03.jpg",
+        "/images/properties/apartamento-dama-el-sauce/04.jpg",
+        "/images/properties/apartamento-dama-el-sauce/05.jpg",
+        "/images/properties/apartamento-dama-el-sauce/06.jpg",
+        "/images/properties/apartamento-dama-el-sauce/07.jpg"
+      ],
+      "imageAlts": [
+        "Entrada independiente y pasillo del apartamento",
+        "Cocineta con muebles oscuros y lavaplatos",
+        "Sala con ventana y puerta",
+        "Habitación con ventana",
+        "Sala-comedor hacia la cocineta",
+        "Baño completo con ducha",
+        "Afiche del apartamento para dama en Residencial El Sauce"
       ],
       "attributes": {}
     }
