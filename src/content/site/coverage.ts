@@ -25,7 +25,7 @@ export const coverageCities: CoverageCity[] = [
     featured: true,
     image: {
       src: "/images/site/zones/valle-de-angeles.jpg",
-      alt: "Casa de teja en Valle de Ángeles",
+      alt: "Artesanías y puerta tallada en Valle de Ángeles",
     },
   },
   {

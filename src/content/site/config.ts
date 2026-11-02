@@ -174,7 +174,7 @@ export const siteConfig = {
     eyebrow: "Nosotros",
     headline: "Comercialización, desarrollo y administración",
     portrait: "/images/site/about.jpg",
-    portraitAlt: "Casa de adobe y teja en Valle de Ángeles",
+    portraitAlt: "Artesanías y puerta tallada en Valle de Ángeles",
     paragraphs: [
       "DIVERSA Bienes Raíces es una agencia en Tegucigalpa. Comercializamos, desarrollamos y administramos bienes inmuebles, y la asesoría inicial es gratuita.",
       "Vendemos y alquilamos, coordinamos avalúos con ingenieros certificados y acompañamos construcción y remodelaciones. La oficina está en el Centro de Negocios del Hotel Clarion.",
@@ -228,7 +228,7 @@ export const siteConfig = {
     },
     {
       src: "/images/site/zones/valle-de-angeles.jpg",
-      alt: "Puerta de madera y teja en Valle de Ángeles",
+      alt: "Artesanías y puerta tallada en Valle de Ángeles",
     },
     {
       src: "/images/site/zones/santa-lucia.jpg",
