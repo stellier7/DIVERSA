@@ -35,7 +35,7 @@ export const coverageCities: CoverageCity[] = [
     featured: true,
     image: {
       src: "/images/site/zones/santa-lucia.jpg",
-      alt: "Santa Lucía entre pinos y techos de teja",
+      alt: "Santa Lucía, iglesia blanca y techos de teja entre montañas",
     },
   },
   {

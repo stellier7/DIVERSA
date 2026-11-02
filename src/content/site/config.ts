@@ -232,7 +232,7 @@ export const siteConfig = {
     },
     {
       src: "/images/site/zones/santa-lucia.jpg",
-      alt: "Santa Lucía, con pinos y techos de teja",
+      alt: "Santa Lucía, iglesia blanca y techos de teja entre montañas",
     },
   ],
 
