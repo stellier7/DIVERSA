@@ -15,7 +15,7 @@ export const coverageCities: CoverageCity[] = [
     featured: true,
     image: {
       src: "/images/site/zones/tegucigalpa.jpg",
-      alt: "Centro de Tegucigalpa desde una ladera",
+      alt: "Tegucigalpa con cielo despejado, torres y montañas al fondo",
     },
   },
   {

@@ -220,7 +220,7 @@ export const siteConfig = {
   gallery: [
     {
       src: "/images/site/zones/tegucigalpa.jpg",
-      alt: "Centro de Tegucigalpa visto desde una ladera",
+      alt: "Tegucigalpa con cielo despejado, torres y montañas al fondo",
     },
     {
       src: "/images/site/zones/tegucigalpa-noche.jpg",
